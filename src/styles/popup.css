@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0f172a;
+  --panel: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #3b82f6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.popup {
+  min-width: 320px;
+  max-width: 420px;
+  padding: 16px;
+  background: linear-gradient(160deg, #0f172a 0%, #111827 100%);
+}
+
+.popup__header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.popup__subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.popup__status {
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.popup__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup__empty {
+  color: var(--muted);
+  margin: 0;
+}
+
+.candidate {
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  background: #111827;
+}
+
+.candidate__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.candidate__header h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.candidate button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.candidate button:hover {
+  background: #2563eb;
+}
+
+.candidate__preview {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.popup__settings {
+  margin-top: 16px;
+  border-top: 1px solid #1f2937;
+  padding-top: 12px;
+}
+
+.popup__settings h3 {
+  margin: 0 0 8px;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.setting select,
+.setting input[type='checkbox'] {
+  margin-left: 12px;
+}
+
+.setting__hint {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

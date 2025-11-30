@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "SmartCopy",
+  "version": "0.1.0",
+  "description": "Smart predictive copy tool for faster text copying on any web page.",
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SmartCopy"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "smartcopy_copy_default": {
+      "suggested_key": {
+        "default": "Alt+Shift+C"
+      },
+      "description": "Copy using SmartCopy default mode"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "smartcopy",
+  "version": "0.1.0",
+  "description": "Smart predictive copy tool for faster text copying on any web page.",
+  "scripts": {
+    "generate:icons": "node scripts/generate-icons.js",
+    "copy:manifest": "node scripts/copy-manifest.js",
+    "dev": "npm run generate:icons && npm run copy:manifest && vite build --watch",
+    "build": "npm run generate:icons && vite build && npm run copy:manifest",
+    "lint": "echo \"No linting configured\"",
+    "postinstall": "npm run generate:icons"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.277",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.10"
+  }
+}
