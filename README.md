@@ -20,6 +20,7 @@ SmartCopy is a Manifest V3 Chrome extension that predicts what you want to copy 
    ```bash
    npm run build
    ```
+   This command also copies `manifest.json` into `dist/` via a Node script (works on Windows/macOS/Linux), preventing missing-manifest errors when loading the unpacked extension.
 
 ## Load in Chrome
 1. Run `npm run build` to create the `dist/` folder (the compiled scripts such as `content.js` and `background.js` are generated here).
